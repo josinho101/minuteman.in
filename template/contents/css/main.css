@@ -137,9 +137,11 @@ h6 {
 .header-author {
   font-family: monospace;
   margin-top: 10px;
-  font-size: 20px;
+  font-size: 17px;
 }
 
 .name {
+  font-size: 20px;
   color: #007bff;
+  font-style: italic;
 }
