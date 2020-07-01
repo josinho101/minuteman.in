@@ -1,2 +1,3 @@
-# minuteman.in
+# Minute Man
+
 Personal blog
