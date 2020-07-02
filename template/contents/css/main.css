@@ -153,7 +153,7 @@ h6 {
 .blog-preview-wrapper {
   overflow: hidden;
   text-overflow: ellipsis;
-  height: 300px;
+  max-height: 300px;
 }
 
 .blog-preview-wrapper p {
@@ -172,4 +172,65 @@ h6 {
 
 .right-improvement {
   text-align: center;
+}
+
+.social-icons {
+  display: block;
+  margin: 0 auto;
+  color: #fff;
+  text-align: left;
+  padding-left: 20px;
+}
+
+.social-icons li {
+  vertical-align: top;
+  display: inline;
+  height: 100px;
+}
+
+.social-icons a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.fa-facebook {
+  padding: 10px 14px;
+  -o-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  background-color: #322f30;
+}
+
+.fa-facebook:hover {
+  background-color: #3d5b99;
+}
+
+.fa-linkedin {
+  padding: 10px 14px;
+  -o-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  background-color: #322f30;
+}
+
+.fa-linkedin:hover {
+  background-color: #0073a4;
+}
+
+.fa-github {
+  padding: 10px 14px;
+  -o-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  background-color: #322f30;
+}
+
+.fa-github:hover {
+  background-color: #5a32a3;
 }
