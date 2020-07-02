@@ -131,7 +131,7 @@ h6 {
 
 .header-title {
   font-family: cursive;
-  font-size: 40px;
+  font-size: 50px;
 }
 
 .header-author {
@@ -144,4 +144,32 @@ h6 {
   font-size: 20px;
   color: #007bff;
   font-style: italic;
+}
+
+.main-content {
+  margin-top: 25px;
+}
+
+.blog-preview-wrapper {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 300px;
+}
+
+.blog-preview-wrapper p {
+  word-break: break-word;
+}
+
+.blog-preview-footer {
+  margin-top: 15px;
+  float: right;
+}
+
+.blog-preview-footer a {
+  text-decoration: underline;
+  font-style: italic;
+}
+
+.right-improvement {
+  text-align: center;
 }
