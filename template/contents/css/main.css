@@ -104,7 +104,7 @@ h6 {
  * Footer
  */
 .blog-footer {
-  padding: 2.5rem 0;
+  padding: 1rem 0;
   color: #999;
   text-align: center;
   background-color: #f9f9f9;
@@ -178,8 +178,7 @@ h6 {
   display: block;
   margin: 0 auto;
   color: #fff;
-  text-align: left;
-  padding-left: 20px;
+  padding-left: 0px;
 }
 
 .social-icons li {
@@ -237,4 +236,35 @@ h6 {
 
 .about-contact {
   margin-top: 20px;
+}
+
+.article-big-image {
+  text-align: center;
+  margin: 10px 10px 10px 0px;
+}
+
+.article-multiple-section {
+  display: flex;
+}
+
+.article-multiple-section p {
+  margin-right: 10px;
+}
+
+.contact-wrapper {
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+.contact-wrapper h2 {
+  padding: 30px;
+}
+
+.contact-wrapper p {
+  padding: 0px;
+  margin: 0px;
+}
+
+.contact-wrapper button {
+  margin: 35px;
 }
