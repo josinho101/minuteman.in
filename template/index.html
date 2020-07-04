@@ -168,23 +168,60 @@
             </ul>
           </div>
 
-          <div class="p-4">
-            <h4 class="font-italic">Archives</h4>
-            <ol class="list-unstyled mb-0">
-              <li><a href="#">March 2014</a></li>
-              <li><a href="#">February 2014</a></li>
-              <li><a href="#">January 2014</a></li>
-              <li><a href="#">December 2013</a></li>
-              <li><a href="#">November 2013</a></li>
-              <li><a href="#">October 2013</a></li>
-              <li><a href="#">September 2013</a></li>
-              <li><a href="#">August 2013</a></li>
-              <li><a href="#">July 2013</a></li>
-              <li><a href="#">June 2013</a></li>
-              <li><a href="#">May 2013</a></li>
-              <li><a href="#">April 2013</a></li>
-            </ol>
-          </div>
+          <h4 class="font-italic">Older posts</h4>
+          <ul id="myUL">
+            <li>
+              <span class="caret">July 2020 (2)</span>
+              <ul class="nested">
+                <li>A very long blog post title which may break.</li>
+                <li>Blob post 2</li>
+              </ul>
+            </li>
+            <li>
+              <span class="caret">June 2020 (0)</span>
+            </li>
+            <li>
+              <span class="caret">May 2020 (4)</span>
+              <ul class="nested">
+                <li>Blob post 1</li>
+                <li>Blob post 2</li>
+                <li>Blob post 3</li>
+                <li>Blob post 4</li>
+              </ul>
+            </li>
+            <li>
+              <span class="caret">April 2020 (5)</span>
+              <ul class="nested">
+                <li>Blob post 1</li>
+                <li>Blob post 2</li>
+                <li>Blob post 3</li>
+                <li>Blob post 4</li>
+                <li>Blob post 5</li>
+              </ul>
+            </li>
+            <li>
+              <span class="caret">March 2020 (3)</span>
+              <ul class="nested">
+                <li>Blob post 1</li>
+                <li>Blob post 2</li>
+                <li>Blob post 3</li>                
+              </ul>
+            </li>
+            <li>
+              <span class="caret">February 2020 (3)</span>
+              <ul class="nested">
+                <li>Blob post 1</li>
+                <li>Blob post 2</li>
+                <li>Blob post 3</li>                
+              </ul>
+            </li>
+            <li>
+              <span class="caret">January 2020 (1)</span>
+              <ul class="nested">
+                <li>Blob post 1</li>
+              </ul>
+            </li>
+          </ul>
         </aside>
       </div>
     </main>
@@ -204,6 +241,15 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
       integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
       crossorigin="anonymous"></script>
+      <script>
+        var toggler = document.getElementsByClassName("caret");
+          for (let i = 0; i < toggler.length; i++) {
+            toggler[i].addEventListener("click", function () {
+              this.parentElement.querySelector(".nested").classList.toggle("active");
+              this.classList.toggle("caret-down");
+            });
+          }
+      </script>
 </body>
 
 </html>
