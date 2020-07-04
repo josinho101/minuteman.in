@@ -266,17 +266,16 @@ h6 {
 }
 
 .contact-wrapper button {
-  margin: 35px;
+  margin: 20px;
 }
 
 /* Remove default bullets */
-ul,
-#myUL {
+.tree-view {
   list-style-type: none;
 }
 
 /* Remove margins and padding from the parent ul */
-#myUL {
+.tree-view {
   margin: 0;
   padding: 0;
 }
