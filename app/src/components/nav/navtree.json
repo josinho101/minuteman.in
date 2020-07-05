@@ -1,0 +1,55 @@
+{
+  "id": 0,
+  "name": "root",
+  "display": false,
+  "children": [
+    { "id": 1, "name": "Home", "display": true, "url": "/", "selected": true },
+    {
+      "id": 2,
+      "name": "About",
+      "display": true,
+      "url": "/about",
+      "selected": false
+    },
+    {
+      "id": 3,
+      "name": "Articles",
+      "display": true,
+      "url": "/articles",
+      "selected": false
+    },
+    {
+      "id": 4,
+      "name": "Projects",
+      "display": true,
+      "url": "/projects",
+      "children": [
+        {
+          "id": 4.1,
+          "name": "Sorting visualizer",
+          "display": true,
+          "url": "/projects/sorting-visualizer"
+        },
+        {
+          "id": 4.2,
+          "name": "Path finding visualizer",
+          "display": true,
+          "url": "/projects/path-finding-visualizer"
+        },
+        {
+          "id": 4.3,
+          "name": "JS Editor",
+          "display": true,
+          "url": "/projects/js-editor"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Contact me",
+      "display": true,
+      "url": "/contact",
+      "selected": false
+    }
+  ]
+}
