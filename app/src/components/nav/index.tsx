@@ -1,6 +1,7 @@
 import React from "react";
 import classNames from "classnames";
 import NavItem from "./typings/navitem";
+import { Link, BrowserRouter as Router, Route } from "react-router-dom";
 
 interface Props {
   items: NavItem[];
@@ -12,13 +13,19 @@ const Nav: React.FunctionComponent<Props> = (props) => {
     if (children && children.length) {
       let items = children.map((item: NavItem) => {
         return (
-          <a
-            className="dropdown-item"
-            href={item.url}
-            key={`child-item-${item.id}`}
-          >
-            {item.name}
-          </a>
+          <React.Fragment key={`child-frag-${item.id}`}>
+            <Link
+              key={`child-item-link-${item.id}`}
+              to={item.url}
+              className="dropdown-item"
+            >
+              {item.name}
+            </Link>
+            <Route
+              key={`child-item-route-${item.id}`}
+              path={children ? "#" : item.url}
+            />
+          </React.Fragment>
         );
       });
       return (
@@ -32,7 +39,7 @@ const Nav: React.FunctionComponent<Props> = (props) => {
 
   // get nav items
   const getNavItems = (items: NavItem[]) => {
-    return items.map((item: NavItem) => {
+    let navItems = items.map((item: NavItem) => {
       let children = getChildItems(item.children);
       return (
         <li
@@ -44,22 +51,30 @@ const Nav: React.FunctionComponent<Props> = (props) => {
           )}
           key={`nav-item-${item.id}`}
         >
-          <a
+          <Link
+            key={`nav-item-link-${item.id}`}
+            // only add link if item has no children
+            to={children ? "#" : item.url}
             className={classNames("nav-link", {
               // only add dropdown-toggle if item has child elements
               "dropdown-toggle": item.children,
             })}
             // only add data-toggle if item has child elements
             data-toggle={children ? "dropdown" : undefined}
-            // only add href if item has no child elements
-            href={children ? "#" : item.url}
           >
             {item.name}
-          </a>
+          </Link>
+          <Route
+            key={`nav-item-route-${item.id}`}
+            // only add link if item has no children
+            path={children ? "#" : item.url}
+          />
           {children}
         </li>
       );
     });
+
+    return <Router>{navItems}</Router>;
   };
 
   return (
