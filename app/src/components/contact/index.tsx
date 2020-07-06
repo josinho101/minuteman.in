@@ -1,7 +1,15 @@
 import React from "react";
+import SocialLinks from "./sociallinks";
 import { Button } from "react-bootstrap";
 
 const Contact: React.FunctionComponent = () => {
+  const onSayHelloClick = (
+    event: React.MouseEvent<HTMLButtonElement, MouseEvent>
+  ) => {
+    let location: any = window.location;
+    location.href = "mailto:josinho.seven@gmail.com";
+  };
+
   return (
     <div className="contact-wrapper">
       <h2>Get in touch with me</h2>
@@ -10,27 +18,11 @@ const Contact: React.FunctionComponent = () => {
         hello, I am hear.
       </p>
       <p>I will try to get back to you asap.</p>
-      <Button variant="outline-primary" size="lg">
+      <Button variant="outline-primary" size="lg" onClick={onSayHelloClick}>
         Say hello
       </Button>
       <div className="about-contact">
-        <ul className="social-icons">
-          <li>
-            <a href="" className="social-icon">
-              <i className="fa fa-github"></i>
-            </a>
-          </li>
-          <li>
-            <a href="" className="social-icon">
-              <i className="fa fa-linkedin"></i>
-            </a>
-          </li>
-          <li>
-            <a href="" className="social-icon">
-              <i className="fa fa-facebook"></i>
-            </a>
-          </li>
-        </ul>
+        <SocialLinks />
       </div>
     </div>
   );
