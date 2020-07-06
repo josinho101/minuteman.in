@@ -193,6 +193,10 @@ h6 {
   text-decoration: none;
 }
 
+.social-icons a:hover{
+  color: #ffffff;
+}
+
 .fa-facebook {
   padding: 10px 14px;
   -o-transition: 0.5s;
@@ -253,9 +257,9 @@ h6 {
 }
 
 .contact-wrapper {
+  width:100%;
   text-align: center;
   padding-bottom: 50px;
-  margin-left: 23%;
 }
 
 .contact-wrapper h2 {
@@ -313,4 +317,10 @@ h6 {
 /* Show the nested list when the user clicks on the caret/arrow (with JavaScript) */
 .active {
   display: block;
+}
+
+.error-404 {
+  width: 100%;
+  padding: 6.75em;
+  text-align: center;
 }

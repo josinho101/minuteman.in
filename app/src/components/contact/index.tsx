@@ -17,7 +17,9 @@ const Contact: React.FunctionComponent = () => {
         My inbox is always open. If you had any questions or just want to say
         hello, I am hear.
       </p>
-      <p>I will try to get back to you asap.</p>
+      <p>I will try to get back to you asap.</p>  
+      <br/>    
+      <p><em>Email id: </em><b>josinho.seven@gmail.com</b></p>
       <Button variant="outline-primary" size="lg" onClick={onSayHelloClick}>
         Say hello
       </Button>
