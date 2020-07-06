@@ -6,6 +6,7 @@ const SocialLinks: React.FunctionComponent = () => {
       <li>
         <a
           target="_blank"
+          title="GitHub"
           className="social-icon"
           href="https://github.com/josinho101"
         >
@@ -13,13 +14,19 @@ const SocialLinks: React.FunctionComponent = () => {
         </a>
       </li>
       <li>
-        <a href="" className="social-icon">
+        <a 
+          target="_blank"          
+          title="LinkedIn"
+          className="social-icon"
+          href="https://www.linkedin.com/in/josinho-joseph"
+        >
           <i className="fa fa-linkedin"></i>
         </a>
       </li>
       <li>
         <a
-          target="_blank"
+          target="_blank"          
+          title="Facebook"
           className="social-icon"
           href="https://www.facebook.com/josinho.joseph"
         >
