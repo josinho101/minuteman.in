@@ -185,6 +185,7 @@ h6 {
   vertical-align: top;
   display: inline;
   height: 100px;
+  padding-right: 10px;
 }
 
 .social-icons a {
@@ -254,6 +255,7 @@ h6 {
 .contact-wrapper {
   text-align: center;
   padding-bottom: 50px;
+  margin-left: 23%;
 }
 
 .contact-wrapper h2 {
