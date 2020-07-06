@@ -2,6 +2,7 @@ import React from "react";
 import Home from "../home";
 import About from "../about";
 import Contact from "../contact";
+import Articles from "../articles";
 
 interface Props {
   match: any;
@@ -19,6 +20,9 @@ const NavWrapper: React.FunctionComponent<Props> = (props) => {
         break;
       case "/contact":
         component = <Contact />;
+        break;
+      case "/articles":
+        component = <Articles />;
         break;
     }
 

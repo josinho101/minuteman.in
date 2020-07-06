@@ -5,7 +5,7 @@ const Header: React.FunctionComponent = () => {
     <header className="blog-header py-3">
       <div className="row flex-nowrap align-items-center">
         <img
-          src="./contents/images/bulb.png"
+          src="/contents/images/bulb.png"
           alt="Minute man"
           width="90"
           height="90"

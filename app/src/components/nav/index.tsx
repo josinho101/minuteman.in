@@ -1,78 +1,84 @@
-import React from "react";
 import classNames from "classnames";
+import React, { useState } from "react";
 import NavItem from "./typings/navitem";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import { Navbar, Nav, NavDropdown } from "react-bootstrap";
 
 interface Props {
   items: NavItem[];
 }
 
-const Nav: React.FunctionComponent<Props> = (props) => {
-  // get child nav items
-  const getChildItems = (children: NavItem[]) => {
-    if (children && children.length) {
-      let items = children.map((item: NavItem) => {
-        return (
-          <Link
-            key={`child-item-link-${item.id}`}
-            to={item.url}
-            className="dropdown-item"
-          >
-            {item.name}
-          </Link>
-        );
-      });
-      return (
-        <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-          {items}
-        </div>
-      );
+const Navigator: React.FunctionComponent<Props> = (props) => {
+  let location = useLocation();
+  const [selectedPath, setSelectedPath] = useState(location.pathname);
+
+  const onNavItemClick = (url: string) => {
+    if (selectedPath !== url) {
+      setSelectedPath(url);
     }
-    return null;
+  };
+
+  const getChildNavLinks = (items: NavItem[]) => {
+    return items.map((item: NavItem) => {
+      return (
+        <NavDropdown.Item
+          key={`nav-dropdown-item-${item.id}`}
+          as={Link}
+          to={item.url}
+          onClick={() => {
+            onNavItemClick(item.url);
+          }}
+          className={classNames({ active: selectedPath === item.url })}
+        >
+          {item.name}
+        </NavDropdown.Item>
+      );
+    });
   };
 
   // get nav items
-  const getNavItems = (items: NavItem[]) => {
-    let navItems = items.map((item: NavItem) => {
-      let children = getChildItems(item.children);
-      return (
-        <li
-          className={classNames(
-            "nav-item",
-            "px-2",
-            { active: item.selected },
-            { dropdown: item.children }
-          )}
-          key={`nav-item-${item.id}`}
-        >
-          <Link
-            key={`nav-item-link-${item.id}`}
-            // only add link if item has no children
-            to={children ? "#" : item.url}
-            className={classNames("nav-link", {
-              // only add dropdown-toggle if item has child elements
-              "dropdown-toggle": item.children,
+  const getNavLinks = (items: NavItem[]) => {
+    return items.map((item: NavItem) => {
+      if (item.children) {
+        let childItems = getChildNavLinks(item.children);
+        return (
+          <NavDropdown
+            title="Projects"
+            className="px-3"
+            id="collasible-nav-dropdown"
+            key={`nav-dropdown-${item.id}`}
+          >
+            {childItems}
+          </NavDropdown>
+        );
+      } else {
+        return (
+          <Nav.Link
+            as={Link}
+            to={item.url}
+            onClick={() => {
+              onNavItemClick(item.url);
+            }}
+            key={`nav-link-item-${item.id}`}
+            className={classNames("px-3", {
+              active: selectedPath === item.url,
             })}
-            // only add data-toggle if item has child elements
-            data-toggle={children ? "dropdown" : undefined}
           >
             {item.name}
-          </Link>
-          {children}
-        </li>
-      );
+          </Nav.Link>
+        );
+      }
     });
-
-    return navItems;
   };
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div className="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul className="navbar-nav mr-auto">{getNavItems(props.items)}</ul>
-      </div>
-    </nav>
+    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+      <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+      <Navbar.Collapse id="responsive-navbar-nav">
+        <Nav className="mr-auto">{getNavLinks(props.items)}</Nav>
+      </Navbar.Collapse>
+    </Navbar>
   );
 };
 
-export default Nav;
+export default Navigator;
