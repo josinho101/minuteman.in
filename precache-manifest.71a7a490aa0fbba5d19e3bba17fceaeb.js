@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "4c0aa4aa05d8b4660c5a35b03ba661ae",
+    "revision": "6b635f3916d0696c60a6ac808d52663f",
     "url": "/minuteman.in/index.html"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/minuteman.in/static/js/2.74527f72.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "5a0d9f233c0a55e54089",
-    "url": "/minuteman.in/static/js/main.8fd5a9fe.chunk.js"
+    "revision": "30f373e385e710f8cf14",
+    "url": "/minuteman.in/static/js/main.e19bc6d7.chunk.js"
   },
   {
     "revision": "8a8bd040dc087b1811cf",

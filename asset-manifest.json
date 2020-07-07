@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.js": "/minuteman.in/static/js/main.8fd5a9fe.chunk.js",
-    "main.js.map": "/minuteman.in/static/js/main.8fd5a9fe.chunk.js.map",
+    "main.js": "/minuteman.in/static/js/main.e19bc6d7.chunk.js",
+    "main.js.map": "/minuteman.in/static/js/main.e19bc6d7.chunk.js.map",
     "runtime-main.js": "/minuteman.in/static/js/runtime-main.9955b1a4.js",
     "runtime-main.js.map": "/minuteman.in/static/js/runtime-main.9955b1a4.js.map",
     "static/css/2.af3c1da9.chunk.css": "/minuteman.in/static/css/2.af3c1da9.chunk.css",
     "static/js/2.74527f72.chunk.js": "/minuteman.in/static/js/2.74527f72.chunk.js",
     "static/js/2.74527f72.chunk.js.map": "/minuteman.in/static/js/2.74527f72.chunk.js.map",
     "index.html": "/minuteman.in/index.html",
-    "precache-manifest.02d8324f97f68177b52580b40fc78043.js": "/minuteman.in/precache-manifest.02d8324f97f68177b52580b40fc78043.js",
+    "precache-manifest.71a7a490aa0fbba5d19e3bba17fceaeb.js": "/minuteman.in/precache-manifest.71a7a490aa0fbba5d19e3bba17fceaeb.js",
     "service-worker.js": "/minuteman.in/service-worker.js",
     "static/css/2.af3c1da9.chunk.css.map": "/minuteman.in/static/css/2.af3c1da9.chunk.css.map",
     "static/js/2.74527f72.chunk.js.LICENSE.txt": "/minuteman.in/static/js/2.74527f72.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.9955b1a4.js",
     "static/css/2.af3c1da9.chunk.css",
     "static/js/2.74527f72.chunk.js",
-    "static/js/main.8fd5a9fe.chunk.js"
+    "static/js/main.e19bc6d7.chunk.js"
   ]
 }
