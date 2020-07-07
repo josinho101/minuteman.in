@@ -14,8 +14,8 @@ const SocialLinks: React.FunctionComponent = () => {
         </a>
       </li>
       <li>
-        <a 
-          target="_blank"          
+        <a
+          target="_blank"
           title="LinkedIn"
           className="social-icon"
           href="https://www.linkedin.com/in/josinho-joseph"
@@ -25,7 +25,7 @@ const SocialLinks: React.FunctionComponent = () => {
       </li>
       <li>
         <a
-          target="_blank"          
+          target="_blank"
           title="Facebook"
           className="social-icon"
           href="https://www.facebook.com/josinho.joseph"
