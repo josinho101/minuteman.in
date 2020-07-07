@@ -37,7 +37,10 @@ const Home: React.FunctionComponent = () => {
       <aside className="col-md-4 blog-sidebar">
         <div className="p-4 mb-3 bg-light rounded right-improvement">
           <div>
-            <img src="/contents/images/too-busy.png" />
+            <img
+              src="/contents/images/too-busy.png"
+              alt={"Too busy for improvements?"}
+            />
           </div>
           <span className="p-1">
             <b>

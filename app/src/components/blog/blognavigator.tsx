@@ -1,6 +1,6 @@
 import React from "react";
 import Blog from "./typings/blog";
-import { group } from "console";
+import classNames from "classnames";
 
 interface Props {
   title: string;
@@ -38,6 +38,7 @@ const BlogNavigator: React.FunctionComponent<Props> = (props) => {
       "December",
     ];
 
+    // group blogs and create an object
     const groups = blogs.reduce((groups: any, blog: Blog) => {
       let date = new Date(Date.parse(blog.publishedAt));
       let month = months[date.getMonth()];
@@ -52,119 +53,47 @@ const BlogNavigator: React.FunctionComponent<Props> = (props) => {
       return groups;
     }, {});
 
-    console.log(groups);
+    return groups;
   };
 
-  groupBlogsByDate(props.blogs);
+  const generateBlogNav = (blogs: Blog[]) => {
+    let groups = groupBlogsByDate(blogs);
+    // iterate group object and create components
+    let components = Object.keys(groups).map((item: any, index: number) => {
+      return (
+        <li key={`blog-group-${index}`}>
+          <span
+            className={classNames("caret", {
+              "caret-down": index === 0,
+            })}
+            onClick={onDateClick}
+          >
+            {item}
+          </span>
+          <ul
+            className={classNames("nested", {
+              active: index === 0,
+            })}
+          >
+            {groups[item].map((blog: Blog, itemIndex: number) => {
+              return (
+                <li key={`blog-group-item-${itemIndex}`}>
+                  <a href="#">{blog.name}</a>
+                </li>
+              );
+            })}
+          </ul>
+        </li>
+      );
+    });
+
+    return components;
+  };
 
   return (
     <React.Fragment>
       <h4 className="font-italic">{props.title}</h4>
-      <ul className="tree-view">
-        <li>
-          <span className="caret caret-down" onClick={onDateClick}>
-            July 2020 (2)
-          </span>
-          <ul className="nested active">
-            <li>
-              <a href="#">
-                A very long blog post title to check if it breaks or not.
-              </a>
-            </li>
-            <li>
-              <a href="#">Blob post 2</a>
-            </li>
-          </ul>
-        </li>
-        <li>
-          <span className="caret" onClick={onDateClick}>
-            June 2020 (0)
-          </span>
-        </li>
-        <li>
-          <span className="caret" onClick={onDateClick}>
-            May 2020 (4)
-          </span>
-          <ul className="nested">
-            <li>
-              <a href="#">Blob post 1</a>
-            </li>
-            <li>
-              <a href="#">Blob post 2</a>
-            </li>
-            <li>
-              <a href="#">Blob post 3</a>
-            </li>
-            <li>
-              <a href="#">Blob post 4</a>
-            </li>
-          </ul>
-        </li>
-        <li>
-          <span className="caret" onClick={onDateClick}>
-            April 2020 (5)
-          </span>
-          <ul className="nested">
-            <li>
-              <a href="#">Blob post 1</a>
-            </li>
-            <li>
-              <a href="#">Blob post 2</a>
-            </li>
-            <li>
-              <a href="#">Blob post 3</a>
-            </li>
-            <li>
-              <a href="#">Blob post 4</a>
-            </li>
-            <li>
-              <a href="#">Blob post 5</a>
-            </li>
-          </ul>
-        </li>
-        <li>
-          <span className="caret" onClick={onDateClick}>
-            March 2020 (3)
-          </span>
-          <ul className="nested">
-            <li>
-              <a href="#">Blob post 1</a>
-            </li>
-            <li>
-              <a href="#">Blob post 2</a>
-            </li>
-            <li>
-              <a href="#">Blob post 3</a>
-            </li>
-          </ul>
-        </li>
-        <li>
-          <span className="caret" onClick={onDateClick}>
-            February 2020 (3)
-          </span>
-          <ul className="nested">
-            <li>
-              <a href="#">Blob post 1</a>
-            </li>
-            <li>
-              <a href="#">Blob post 2</a>
-            </li>
-            <li>
-              <a href="#">Blob post 3</a>
-            </li>
-          </ul>
-        </li>
-        <li>
-          <span className="caret" onClick={onDateClick}>
-            January 2020 (1)
-          </span>
-          <ul className="nested">
-            <li>
-              <a href="#">Blob post 1</a>
-            </li>
-          </ul>
-        </li>
-      </ul>
+      <ul className="tree-view">{generateBlogNav(props.blogs)}</ul>
     </React.Fragment>
   );
 };

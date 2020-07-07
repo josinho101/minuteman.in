@@ -35,7 +35,11 @@ const About: React.FunctionComponent = () => {
       </div>
       <aside className="col-md-4 blog-sidebar">
         <div className="p-4 mb-3 bg-light rounded right-improvement">
-          <img src="/contents/images/jj.jpg" title="Joseph J Emmatty" />
+          <img
+            src="/contents/images/jj.jpg"
+            title="Joseph J Emmatty"
+            alt={"Author - Joseph J Emmatty"}
+          />
         </div>
       </aside>
     </React.Fragment>
