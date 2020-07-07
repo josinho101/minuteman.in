@@ -1,5 +1,6 @@
 import React from "react";
 import Blog from "./typings/blog";
+import { group } from "console";
 
 interface Props {
   title: string;
@@ -21,14 +22,40 @@ const BlogNavigator: React.FunctionComponent<Props> = (props) => {
     }
   };
 
-  const getBlogs = (blogs: Blog[]) => {
-    /*let date = Date.parse("April 20, 2020");
-    let d = new Date(date);
-    d.getMonth();*/
-    const groups = blogs.reduce((array: Blog[][], currentValue: Blog) => {
-      return array;
-    }, []);
+  const groupBlogsByDate = (blogs: Blog[]) => {
+    const months = [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December",
+    ];
+
+    const groups = blogs.reduce((groups: any, blog: Blog) => {
+      let date = new Date(Date.parse(blog.publishedAt));
+      let month = months[date.getMonth()];
+      let year = date.getFullYear();
+      let key = `${month} ${year}`;
+
+      if (!groups[key]) {
+        groups[key] = [];
+      }
+      groups[key].push(blog);
+
+      return groups;
+    }, {});
+
+    console.log(groups);
   };
+
+  groupBlogsByDate(props.blogs);
 
   return (
     <React.Fragment>
