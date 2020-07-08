@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/minuteman.in/precache-manifest.71a7a490aa0fbba5d19e3bba17fceaeb.js"
+  "/minuteman.in/precache-manifest.fa8f2ae0155c0aa901f6f193fbce989c.js"
 );
 
 self.addEventListener('message', (event) => {
