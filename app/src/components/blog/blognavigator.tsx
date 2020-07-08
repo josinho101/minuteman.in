@@ -1,6 +1,7 @@
 import React from "react";
 import Blog from "./typings/blog";
 import classNames from "classnames";
+import { Link } from "react-router-dom";
 
 interface Props {
   title: string;
@@ -78,7 +79,7 @@ const BlogNavigator: React.FunctionComponent<Props> = (props) => {
             {groups[item].map((blog: Blog, itemIndex: number) => {
               return (
                 <li key={`blog-group-item-${itemIndex}`}>
-                  <a href="#">{blog.name}</a>
+                  <Link to={`/articles/${blog.url}`}>{blog.name}</Link>
                 </li>
               );
             })}
@@ -92,8 +93,10 @@ const BlogNavigator: React.FunctionComponent<Props> = (props) => {
 
   return (
     <React.Fragment>
-      <h4 className="font-italic">{props.title}</h4>
+      <hr />
+      <h4 className="font-italic blog-nav-title">{props.title}</h4>
       <ul className="tree-view">{generateBlogNav(props.blogs)}</ul>
+      <hr />
     </React.Fragment>
   );
 };

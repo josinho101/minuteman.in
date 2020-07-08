@@ -193,7 +193,7 @@ h6 {
   text-decoration: none;
 }
 
-.social-icons a:hover{
+.social-icons a:hover {
   color: #ffffff;
 }
 
@@ -257,7 +257,7 @@ h6 {
 }
 
 .contact-wrapper {
-  width:100%;
+  width: 100%;
   text-align: center;
   padding-bottom: 50px;
 }
@@ -323,4 +323,13 @@ h6 {
   width: 100%;
   padding: 6.75em;
   text-align: center;
+}
+
+.project-title {
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+}
+
+.blog-nav-title {
+  margin-bottom: 10px;
 }
