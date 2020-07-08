@@ -5,6 +5,8 @@ import SocialLinks from "../contact/sociallinks";
 import BlogNavigator from "../blog/blognavigator";
 import BlogHelper from "../../helpers/bloghelper";
 
+const sideNotePng = require("../../assets/images/too-busy.png");
+
 const Home: React.FunctionComponent = () => {
   const blogs = BlogHelper.getAllBlogs();
 
@@ -37,10 +39,7 @@ const Home: React.FunctionComponent = () => {
       <aside className="col-md-4 blog-sidebar">
         <div className="p-4 mb-3 bg-light rounded right-improvement">
           <div>
-            <img
-              src="/contents/images/too-busy.png"
-              alt={"Too busy for improvements?"}
-            />
+            <img src={sideNotePng} alt={"Too busy for improvements?"} />
           </div>
           <span className="p-1">
             <b>

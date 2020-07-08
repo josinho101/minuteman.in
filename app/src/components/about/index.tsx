@@ -1,6 +1,8 @@
 import React from "react";
 import SocialLinks from "../contact/sociallinks";
 
+const authorPng = require("../../assets/images/jj.jpg");
+
 const About: React.FunctionComponent = () => {
   return (
     <React.Fragment>
@@ -36,7 +38,7 @@ const About: React.FunctionComponent = () => {
       <aside className="col-md-4 blog-sidebar">
         <div className="p-4 mb-3 bg-light rounded right-improvement">
           <img
-            src="/contents/images/jj.jpg"
+            src={authorPng}
             title="Joseph J Emmatty"
             alt={"Author - Joseph J Emmatty"}
           />
