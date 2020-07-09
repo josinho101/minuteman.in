@@ -333,3 +333,8 @@ h6 {
 .blog-nav-title {
   margin-bottom: 10px;
 }
+
+.p-start {
+  font-size: 22px;
+  font-weight: 500;
+}
