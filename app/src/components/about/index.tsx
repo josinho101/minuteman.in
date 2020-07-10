@@ -39,8 +39,9 @@ const About: React.FunctionComponent = () => {
           <p>Here are some technologies I've been working recently:</p>
           <b>
             <ul>
-              <li>React JS, JavaScript/TypeScript</li>
+              <li>React JS, Node JS, JavaScript/TypeScript</li>
               <li>C#, .net core, ASP.Net MVC, Web API</li>
+              <li>SQL Server</li>
             </ul>
           </b>
           <p>
@@ -63,9 +64,9 @@ const About: React.FunctionComponent = () => {
             </li>
             <li>
               <b>DIY projects</b>: It's fun to make things, I spend my free time
-              troubleshooting electrical and electronic gadgets and Arduino
-              board, it's fun working with it as I can program and control
-              hardware, which feels like my programs had come to life.
+              troubleshooting electrical and electronic gadgets. Arduino board,
+              it's fun working with it as I can program and control hardware,
+              which feels like my programs had come to life.
             </li>
             <li>
               <b>Football</b>: A football lover and a big fan of FC Barcelona.

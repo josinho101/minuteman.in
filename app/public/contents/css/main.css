@@ -327,7 +327,7 @@ h6 {
 
 .project-title {
   margin-bottom: 20px;
-  font-size: 2.5rem;
+  font-size: 2rem;
 }
 
 .blog-nav-title {
@@ -337,4 +337,9 @@ h6 {
 .p-start {
   font-size: 22px;
   font-weight: 500;
+}
+
+.medium-image {
+  width: 500px;
+  padding: 10px;
 }
