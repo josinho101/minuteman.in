@@ -79,7 +79,7 @@ const BlogNavigator: React.FunctionComponent<Props> = (props) => {
             {groups[item].map((blog: Blog, itemIndex: number) => {
               return (
                 <li key={`blog-group-item-${itemIndex}`}>
-                  <Link to={`/articles/${blog.url}`}>{blog.name}</Link>
+                  <Link to={`/articles/${blog.url}`}>{blog.title}</Link>
                 </li>
               );
             })}
