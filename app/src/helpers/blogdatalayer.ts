@@ -1,16 +1,14 @@
 import Blog from "../components/blog/typings/blog";
 
 // json blog data import
-import blog1Data from "../posts/post-1.json";
-import blog2Data from "../posts/post-2.json";
-import blog3Data from "../posts/post-3.json";
+import theGenesis from "../posts/the-genesis.json";
 
 class BlogDataLayer {
   /**
    * return all blogs
    */
   public static getAll = (): Blog[] => {
-    let data = [blog1Data, blog2Data, blog3Data];
+    let data = [theGenesis];
 
     let blogs = data.map((item) => {
       return BlogDataLayer.MapToBlog(item);

@@ -1,0 +1,10 @@
+{
+  "name": "the-genesis",
+  "enabled": true,
+  "title": "The Genesis",
+  "publishedAt": "March 27, 2020",
+  "shortTitle": "The Genesis",
+  "url": "the-genesis",
+  "shortDescriptionHTML": "<p> Hello guys, how are things going at your end? I know COVID-19 is raging and currently everyone will be under lockdown. Yes it is a very critical time where we need to be very careful and we need to do what we can to stop spreading this virus. Lot of people are suffering but evrything will have other side. We will overcome this for sure :) </p>",
+  "descriptionHTML": "<p> Hello guys, how are things going at your end? I know COVID-19 is raging and currently everyone will be under lockdown. Yes, it is a very critical time where we need to be very careful and we need to do what we can to stop spreading this virus. Lot of people are suffering but everything will have other side. We will overcome this for sure :) </p><p> I will be writing technical blogs here, which I got from my software engineering experience, or might be something I will be learning in my journey. I'm not a designer, so please don't expect an eye-catching design from me. I tried to make the design simple and easy to work with. </p><div class='article-big-image'> <img src='/contents/images/posts/the-genesis/genesis.jpg'/> </div><p> You might be thinking why I put this image here right? What is Genesis? <b>The beginning!</b> Yes, it's a new beginning for me. I am currently working from home, and I get some free time. So, I was thinking about how I can use my free time efficiently and then I came up with the idea of building my own blogging site, through which I could share my thoughts. </p><p> Thank you for taking time to read through my article. See you in the next. <b>Stay home stay safe. Break the chain.</b> </p>"
+}
