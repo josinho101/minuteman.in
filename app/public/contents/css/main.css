@@ -343,3 +343,12 @@ h6 {
   width: 500px;
   padding: 10px;
 }
+
+.article-medium-image-left {
+  text-align: left;
+  margin: 10px 10px 10px 0px;
+}
+
+.article-medium-image-left img {
+  width: 400px;
+}
