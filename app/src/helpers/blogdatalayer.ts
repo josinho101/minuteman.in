@@ -2,13 +2,14 @@ import Blog from "../components/blog/typings/blog";
 
 // json blog data import
 import theGenesis from "../posts/the-genesis.json";
+import deployReactToGhPages from "../posts/deploy-react-app-to-gh-pages.json";
 
 class BlogDataLayer {
   /**
    * return all blogs
    */
   public static getAll = (): Blog[] => {
-    let data = [theGenesis];
+    let data = [theGenesis, deployReactToGhPages];
 
     let blogs = data.map((item) => {
       return BlogDataLayer.MapToBlog(item);
